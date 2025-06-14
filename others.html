@@ -1,15 +1,83 @@
 <!DOCTYPE html>
-<html lang="ME">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHAPTER-2 TASKS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Menu with Dropdown</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #333;
+    }
+
+    .menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu li {
+      position: relative;
+    }
+
+    .menu a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .menu a:hover {
+      background-color: #555;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #444;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown-content li a {
+      padding: 10px;
+      color: white;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
 </head>
-<body> 
-<nav>
-    <a href="HOME.html">HOME</a>&nbsp;&nbsp;
-    <a href="ME.html">About me</a>&nbsp;&nbsp;
-    <a href="JUS.html">About JUS</a>&nbsp;&nbsp;
-    <a href="DEGMADAYDA.html">Xaafadeyda</a>&nbsp;&nbsp;
-    <a href="MYCONTACT.html">Contact me</a>&nbsp;&nbsp;
-</nav>
+<body>
+  <nav>
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">About Jus</a></li>
+      <li><a href="#">My Village</a></li>
+      <li><a href="#">Contact</a></li>
+
+      <!-- Others Dropdown -->
+      <li class="dropdown">
+        <a href="#">Others</a>
+        <ul class="dropdown-content">
+          <li><a href="#">Chapter 6</a></li>
+          <li><a href="#">Chapter 7</a></li>
+          <li><a href="#">Chapter 8</a></li>
+          <li><a href="#">Chapter 9</a></li>
+          <li><a href="#">Chapter 10</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</body>
+</html>
